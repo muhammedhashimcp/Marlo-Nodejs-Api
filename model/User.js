@@ -15,8 +15,9 @@ const userSchema = new mongoose.Schema(
 			required: [true, 'Last name is required'],
 			type: String,
 		},
+		// converting our date into ISODate using new Date("<YYYY-mm-dd>")
 		DOB: {
-			type: String,
+			type: Date,
 		},
 
 		email: {
@@ -25,8 +26,8 @@ const userSchema = new mongoose.Schema(
 			unique: true,
 		},
 		phoneNumber: {
-			type: String,
-			required: [true, 'Password is required'],
+			type: Number,
+			required: [true, 'Phone Number is required'],
 			unique: true,
 		},
 		occupation: {
@@ -38,6 +39,10 @@ const userSchema = new mongoose.Schema(
 		password: {
 			type: String,
 			required: [true, 'Password is required'],
+		},
+		isBlocked: {
+			type: Boolean,
+			default: false,
 		},
 	},
 	{

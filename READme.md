@@ -17,8 +17,7 @@ JWT_KEY=any text\
 Runs the app in the development mode.\
 Open [http://localhost:5000](http://localhost:5000) to view the default endpoint in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+For validate end points we can use postman.\
 
 
 
